@@ -3,259 +3,90 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Enciclopédia de Ciência</title>
+<title>Enciclopédia de Ciência Completa</title>
 <style>
-/* ESTILOS GERAIS */
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background:#f9f9f9; color:#333; line-height:1.8; }
+body { font-family: Arial, sans-serif; background:#f5f5f5; color:#333; line-height:1.7; scroll-behavior: smooth; }
 header { background: linear-gradient(90deg,#1e90ff,#00bfff); color:white; text-align:center; padding:60px 20px; }
-header h1 { font-size:3em; }
-header p { font-size:1.3em; margin-top:10px; }
-
-/* NAV ABAS */
-nav { display:flex; justify-content:center; background:#104e8b; flex-wrap:wrap; position:sticky; top:0; z-index:100; }
-nav button { background:none; border:none; color:white; padding:15px 25px; cursor:pointer; font-size:1em; font-weight:bold; transition:0.3s; }
-nav button:hover { background:#1e90ff; }
-
-/* SEÇÕES */
-section { padding:40px 20px; max-width:1200px; margin:auto; display:none; }
-section.active { display:block; }
-section h2 { color:#1e90ff; text-align:center; margin-bottom:30px; font-size:2.5em; }
-
-/* BLOCO DE EXPLICAÇÃO */
-.explicacao { background:#e0f7ff; padding:30px; margin:25px 0; border-radius:12px; }
-.explicacao h3 { color:#104e8b; margin-bottom:15px; }
-.explicacao p { margin-bottom:15px; text-align:justify; }
-
-/* BOTÕES INTERATIVOS */
-button.action { background:#1e90ff; color:white; border:none; padding:12px 25px; border-radius:8px; cursor:pointer; transition:0.3s; margin-top:10px; }
-button.action:hover { background:#104e8b; }
-
-/* FORMULÁRIO DE EXPERIMENTOS */
-form { background:#f0ffff; padding:25px; border-radius:12px; margin-top:30px; }
-form input, form textarea { width:100%; padding:12px; margin:12px 0; border-radius:6px; border:1px solid #ccc; }
-
-/* FOOTER */
+header h1 { font-size:3em; margin-bottom:10px; }
+nav { position: sticky; top:0; background:#104e8b; display:flex; justify-content:center; flex-wrap:wrap; z-index:100; }
+nav a { color:white; text-decoration:none; padding:15px 25px; display:inline-block; font-weight:bold; transition:0.3s; }
+nav a:hover { background:#1e90ff; border-radius:5px; }
+section { padding:50px 20px; max-width:1200px; margin:auto; }
+section h2 { font-size:2.8em; color:#1e90ff; margin-bottom:25px; text-align:center; }
+.explicacao { background:#e0f7ff; padding:25px; border-radius:10px; margin-bottom:30px; text-align:justify; font-size:1.05em; }
 footer { background:#104e8b; color:white; text-align:center; padding:25px; margin-top:40px; }
 </style>
 </head>
 <body>
 
 <header>
-<h1>Enciclopédia de Ciência</h1>
-<p>Explore a ciência de forma completa, com explicações detalhadas, exemplos do dia a dia e atividades práticas</p>
+<h1>Enciclopédia de Ciência Completa</h1>
+<p>Todo o conhecimento científico em uma única página com explicações detalhadas e exemplos do dia a dia</p>
 </header>
 
 <nav>
-<button onclick="openTab('fisica')">Física</button>
-<button onclick="openTab('quimica')">Química</button>
-<button onclick="openTab('biologia')">Biologia</button>
-<button onclick="openTab('astronomia')">Astronomia</button>
-<button onclick="openTab('tecnologia')">Tecnologia</button>
-<button onclick="openTab('terra')">Ciências da Terra</button>
-<button onclick="openTab('historia')">História da Ciência</button>
-<button onclick="openTab('experimentos')">Experimentos</button>
+<a href="#historia">História da Ciência</a>
+<a href="#biologia">Biologia</a>
+<a href="#fisica">Física</a>
+<a href="#quimica">Química</a>
+<a href="#astronomia">Astronomia</a>
+<a href="#tecnologia">Tecnologia</a>
+<a href="#terra">Ciências da Terra</a>
 </nav>
 
-<!-- FÍSICA -->
-<section id="fisica" class="active">
-<h2>Física</h2>
-
-<div class="explicacao">
-<h3>Energia</h3>
-<p>A energia é a capacidade de realizar trabalho ou provocar transformação. A física classifica energia em diversas formas, como cinética, potencial, térmica, elétrica, química, nuclear e outras. Entender energia é essencial para compreender quase todos os fenômenos do universo.</p>
-<p><strong>Exemplo do dia a dia:</strong> Quando você pedala uma bicicleta, o corpo converte energia química armazenada nos alimentos em energia cinética que movimenta a bicicleta. Cozinhar com fogão ou micro-ondas envolve transformar energia elétrica ou química em calor que aquece os alimentos.</p>
-<button class="action" onclick="alert('Experimento: meça quantos metros você percorre pedalando em 1 minuto!')">Experimente</button>
-</div>
-
-<div class="explicacao">
-<h3>Forças e Movimento</h3>
-<p>Todo objeto tende a permanecer em repouso ou em movimento uniforme (Lei da Inércia). Para mudar o movimento de um objeto, é necessária uma força. A força pode acelerar, desacelerar ou mudar a direção de um objeto.</p>
-<p><strong>Exemplo do dia a dia:</strong> Empurrar um carrinho de supermercado exige força para acelerar e dirigir o carrinho. A quantidade de força aplicada afeta a velocidade.</p>
-<button class="action" onclick="alert('Experimente: empurre um objeto leve e depois um objeto pesado e observe a diferença!')">Experimente</button>
-</div>
-
-<div class="explicacao">
-<h3>Gravidade</h3>
-<p>A gravidade é a força que atrai todos os objetos em direção ao centro da Terra. Newton explicou que esta força depende da massa dos objetos e da distância entre eles. A gravidade não só mantém objetos na Terra, mas também governa o movimento dos planetas e estrelas.</p>
-<p><strong>Exemplo do dia a dia:</strong> Soltar uma bola faz com que ela caia no chão. Em esportes, como basquete ou futebol, a trajetória da bola é influenciada pela gravidade.</p>
-<button class="action" onclick="alert('Experimente: solte dois objetos de massas diferentes e observe como eles caem (desconsiderando o ar)!')">Experimente</button>
-</div>
-
-<div class="explicacao">
-<h3>Leis da Termodinâmica</h3>
-<p>A termodinâmica estuda a energia térmica e suas transformações. A primeira lei afirma que energia não pode ser criada ou destruída, apenas transformada. A segunda lei diz que energia tende a se dispersar, aumentando a entropia.</p>
-<p><strong>Exemplo do dia a dia:</strong> Cozinhar água no fogão transfere energia térmica do fogo para a água. Um refrigerador retira calor do interior para conservar alimentos.</p>
-</div>
-</section>
-
-<!-- QUÍMICA -->
-<section id="quimica">
-<h2>Química</h2>
-
-<div class="explicacao">
-<h3>Reações Químicas</h3>
-<p>Reações químicas transformam substâncias em outras. Durante essas transformações, podem ser liberadas ou absorvidas energias, como calor, luz ou som. A química explica fenômenos cotidianos, como cozinhar, ferrugem, respiração e digestão.</p>
-<p><strong>Exemplo do dia a dia:</strong> Misturar vinagre com bicarbonato de sódio gera gás CO₂, formando espuma. Cozinhar arroz ou pão envolve reações químicas que transformam os ingredientes.</p>
-<button class="action" onclick="alert('Experimento: faça a reação vinagre + bicarbonato em um copo e observe a espuma!')">Experimente</button>
-</div>
-
-<div class="explicacao">
-<h3>Estados da Matéria</h3>
-<p>A matéria pode existir em três estados principais: sólido, líquido e gasoso. Mudanças de estado ocorrem devido à energia térmica ou pressão. Há também plasma e condensados de Bose-Einstein, estudados em laboratórios.</p>
-<p><strong>Exemplo do dia a dia:</strong> Água congelando vira gelo (líquido → sólido), água fervendo vira vapor (líquido → gasoso). Refrigeradores e fogões usam mudanças de estado para conservar e cozinhar alimentos.</p>
-</div>
-
-<div class="explicacao">
-<h3>pH e Soluções</h3>
-<p>O pH mede a acidez ou alcalinidade de soluções. Escala vai de 0 a 14: valores <7 são ácidos, >7 básicos e 7 neutro. Compreender o pH é importante em química, biologia, agricultura e saúde.</p>
-<p><strong>Exemplo do dia a dia:</strong> Limão é ácido, sabão é básico, água pura é neutra. Testes de pH em solos ajudam agricultores a melhorar colheitas.</p>
-<button class="action" onclick="alert('Experimente: teste pH de suco de limão e água com bicarbonato!')">Experimente</button>
-</div>
-</section>
-
-<!-- BIOLOGIA -->
-<section id="biologia">
-<h2>Biologia</h2>
-
-<div class="explicacao">
-<h3>Células e Organelos</h3>
-<p>Células são unidades básicas da vida. Todos os organismos vivos são formados por células, que contêm estruturas chamadas organelos, responsáveis por funções vitais como respiração, síntese de proteínas e divisão celular.</p>
-<p><strong>Exemplo do dia a dia:</strong> Observando uma cebola ou uma folha de planta ao microscópio, você pode ver células individuais e entender que todas as formas de vida compartilham esta estrutura básica.</p>
-</div>
-
-<div class="explicacao">
-<h3>Genética</h3>
-<p>Genes carregam informações hereditárias que determinam características físicas e funcionais. Mendel descobriu leis da herança genética estudando ervilhas. Hoje, genética explica doenças, características e evolução.</p>
-<p><strong>Exemplo do dia a dia:</strong> Cor dos olhos, cabelo, altura e predisposição a algumas doenças são determinadas geneticamente.</p>
-</div>
-
-<div class="explicacao">
-<h3>Ecologia</h3>
-<p>Estuda relações entre seres vivos e seu ambiente. Compreender ecologia ajuda a preservar recursos naturais e o equilíbrio dos ecossistemas.</p>
-<p><strong>Exemplo do dia a dia:</strong> Plantar árvores, cuidar de rios e reciclar materiais impacta diretamente na saúde do meio ambiente.</p>
-</div>
-</section>
-
-<!-- ASTRONOMIA -->
-<section id="astronomia">
-<h2>Astronomia</h2>
-
-<div class="explicacao">
-<h3>Universo e Galáxias</h3>
-<p>O universo contém bilhões de galáxias, cada uma com bilhões de estrelas. A astronomia estuda a formação, evolução e composição de estrelas, planetas, buracos negros e galáxias.</p>
-<p><strong>Exemplo do dia a dia:</strong> O Sol aquece e ilumina a Terra, influenciando clima, agricultura e vida cotidiana.</p>
-</div>
-
-<div class="explicacao">
-<h3>Fases da Lua</h3>
-<p>A Lua apresenta fases devido à posição relativa entre Sol, Terra e Lua. Isso influencia marés e calendários.</p>
-<p><strong>Exemplo do dia a dia:</strong> Observando a Lua durante o mês, você verá fases crescente, cheia, minguante e nova.</p>
-</div>
-
-<div class="explicacao">
-<h3>Planetas e Órbitas</h3>
-<p>Planetas orbitam estrelas, como a Terra orbita o Sol. Órbitas são determinadas pela gravidade e velocidade dos planetas. Compreender isso ajuda a estudar clima, estações do ano e viagens espaciais.</p>
-</div>
-</section>
-
-<!-- TECNOLOGIA -->
-<section id="tecnologia">
-<h2>Tecnologia e Engenharia</h2>
-
-<div class="explicacao">
-<h3>Eletrônica e Circuitos</h3>
-<p>Eletrônica estuda o controle da corrente elétrica. Circuitos simples podem acender LEDs, acionar motores ou sensores. Tecnologia moderna depende de eletrônica para celulares, computadores e eletrodomésticos.</p>
-<button class="action" onclick="alert('Experimente: monte um circuito simples com LED e bateria!')">Experimente</button>
-</div>
-
-<div class="explicacao">
-<h3>Programação</h3>
-<p>Programação cria instruções para computadores realizarem tarefas automáticas. Permite desenvolvimento de softwares, aplicativos e automação industrial.</p>
-<p><strong>Exemplo do dia a dia:</strong> Aplicativos de celular, sites e jogos são frutos da programação.</p>
-<button class="action" onclick="alert('Experimente: tente criar um mini programa em Scratch ou Python!')">Experimente</button>
-</div>
-</section>
-
-<!-- CIÊNCIAS DA TERRA -->
-<section id="terra">
-<h2>Ciências da Terra</h2>
-
-<div class="explicacao">
-<h3>Geologia</h3>
-<p>Estuda a formação da Terra, rochas, solos, minerais e movimentos tectônicos. Ajuda a compreender terremotos, vulcões e recursos naturais.</p>
-<p><strong>Exemplo do dia a dia:</strong> Montanhas, praias, rios e minerais que usamos na construção e tecnologia são estudados pela geologia.</p>
-</div>
-
-<div class="explicacao">
-<h3>Climatologia</h3>
-<p>Analisa clima e padrões meteorológicos. Entender clima é essencial para agricultura, previsão do tempo e combate a desastres naturais.</p>
-<p><strong>Exemplo do dia a dia:</strong> Saber que chove mais em determinadas épocas ajuda a plantar culturas adequadas e se preparar para enchentes.</p>
-</div>
-
-<div class="explicacao">
-<h3>Oceanografia</h3>
-<p>Estuda os oceanos, correntes marítimas, ecossistemas e influência no clima global.</p>
-<p><strong>Exemplo do dia a dia:</strong> Marés influenciam pesca, navegação e esportes aquáticos.</p>
-</div>
-</section>
-
-<!-- HISTÓRIA DA CIÊNCIA -->
 <section id="historia">
 <h2>História da Ciência</h2>
-
 <div class="explicacao">
-<h3>Grandes Cientistas</h3>
-<p>Cientistas como Newton, Galileu, Curie, Einstein e Tesla revolucionaram a forma como entendemos o mundo. Seus experimentos e teorias moldaram a física, química, biologia e tecnologia.</p>
-</div>
-
-<div class="explicacao">
-<h3>Descobertas que mudaram o mundo</h3>
-<p>Descobertas como eletricidade, penicilina, teoria da relatividade e DNA transformaram medicina, comunicação, transporte e conhecimento humano.</p>
-</div>
-
-<div class="explicacao">
-<h3>Ciência no Cotidiano</h3>
-<p>Toda tecnologia moderna, remédios, transporte e energia elétrica dependem de descobertas científicas. Compreender ciência ajuda a tomar decisões conscientes e melhorar a qualidade de vida.</p>
+A história da ciência mostra como a humanidade buscou compreender o mundo através da observação, experimentação e raciocínio lógico. Desde os povos antigos, como egípcios, babilônios e chineses, que estudavam estrelas e fenômenos naturais para agricultura e navegação, até filósofos gregos como Aristóteles e Pitágoras que criaram lógica, matemática e conceitos de física, a ciência sempre foi impulsionada pela curiosidade. Na Idade Média, o conhecimento foi preservado em mosteiros e universidades árabes e europeias. A Revolução Científica nos séculos XVI e XVII trouxe figuras como Galileu, Newton e Kepler, estabelecendo métodos experimentais e leis físicas fundamentais. Marie Curie descobriu radioatividade, transformando a medicina e a física nuclear, enquanto Einstein revolucionou a compreensão do espaço e tempo com a relatividade. Cada avanço científico permitiu tecnologias que impactam nossa vida cotidiana, como eletricidade, computadores, remédios, transportes e comunicação global. Entender a história da ciência nos ajuda a valorizar conquistas humanas, compreender o método científico e aplicar o conhecimento para o futuro da sociedade.
 </div>
 </section>
 
-<!-- EXPERIMENTOS -->
-<section id="experimentos">
-<h2>Experimentos Práticos</h2>
-
+<section id="biologia">
+<h2>Biologia</h2>
 <div class="explicacao">
-<h3>Aprendendo Ciência na Prática</h3>
-<p>Experimentos caseiros ajudam a entender conceitos de física, química, biologia e tecnologia. Exemplos incluem:</p>
-<ul>
-<li>Sacudir uma garrafa com moedas para gerar energia cinética</li>
-<li>Vinagre + bicarbonato para observar reação química</li>
-<li>Crescimento de plantas para estudar fotossíntese</li>
-<li>Soltar objetos diferentes para estudar gravidade</li>
-<li>Montar circuitos simples para estudar eletrônica</li>
-</ul>
-<p>Esses experimentos são seguros, educativos e ajudam a compreender a ciência de forma prática.</p>
+A biologia estuda a vida em todas as suas formas, desde micro-organismos até complexos ecossistemas. Ela explica a estrutura e função das células, que contêm DNA, RNA e proteínas, elementos fundamentais para processos vitais. A genética mostra como características são herdadas, influenciando saúde, aparência e evolução das espécies. A fisiologia analisa sistemas do corpo humano, como digestão, circulação, respiração e sistema nervoso, explicando como o corpo mantém equilíbrio e reage ao ambiente. A ecologia examina relações entre seres vivos e o ambiente, mostrando impactos do desmatamento, poluição e mudanças climáticas. Biologia aplicada está presente na medicina, agricultura, preservação ambiental, biotecnologia, vacinas e alimentos, mostrando que compreender a vida é essencial para saúde, sustentabilidade e inovação.
+</div>
+</section>
 
-<form onsubmit="alert('Obrigado! Seu experimento foi enviado.'); return false;">
-<input type="text" placeholder="Seu nome" required>
-<input type="email" placeholder="Seu e-mail" required>
-<textarea placeholder="Descreva seu experimento" rows="5" required></textarea>
-<button type="submit">Enviar</button>
-</form>
+<section id="fisica">
+<h2>Física</h2>
+<div class="explicacao">
+A física estuda as leis que governam o universo, explicando desde partículas subatômicas até galáxias. Conceitos como energia, força, movimento, gravidade, eletricidade, magnetismo e termodinâmica descrevem fenômenos naturais e sustentam tecnologias modernas. Energia pode ser cinética, potencial, térmica, elétrica, química ou nuclear, sendo transformada continuamente. As leis de Newton explicam movimento de objetos cotidianos e foguetes. A termodinâmica analisa calor, máquinas e motores. A óptica explica luz e visão, permitindo microscópios, telescópios e câmeras. A física moderna, como a relatividade e mecânica quântica, desafia a intuição, mostrando comportamentos de partículas e interações entre espaço e tempo. Física está presente em eletrônicos, transportes, medicina, esportes e engenharia, conectando teoria e prática no dia a dia.
+</div>
+</section>
+
+<section id="quimica">
+<h2>Química</h2>
+<div class="explicacao">
+A química estuda a matéria, suas propriedades, estrutura e transformações. Reações químicas rearranjam átomos e moléculas, liberando ou absorvendo energia, explicando fenômenos como cozinhar, fermentar alimentos, limpar superfícies e interagir medicamentos com o corpo humano. Estados da matéria — sólido, líquido e gasoso — mudam com temperatura e pressão. O pH indica acidez ou alcalinidade, essencial para agricultura, saúde e indústria. A química orgânica estuda compostos de carbono presentes em combustíveis, plásticos e remédios. A química inorgânica investiga metais, sais e minerais. Conhecimentos químicos permitem desenvolver novos materiais, medicamentos, alimentos, energias alternativas e nanotecnologia, mostrando como a ciência transforma o mundo.
+</div>
+</section>
+
+<section id="astronomia">
+<h2>Astronomia</h2>
+<div class="explicacao">
+A astronomia investiga o universo, incluindo planetas, estrelas, galáxias e buracos negros, analisando formação, evolução e movimentos. Observações explicam eclipses, marés, órbitas planetárias e supernovas. Astrofísica estuda propriedades físicas e químicas de corpos celestes. Satélites e telescópios expandem o conhecimento, permitindo explorar planetas distantes, estudar clima e desenvolver tecnologias de comunicação e GPS. A astronomia conecta ciência, tecnologia e cotidiano humano, influenciando transporte, previsão do tempo, monitoramento ambiental e despertando curiosidade sobre nosso lugar no cosmos. Explorar o universo também inspira filosofia, arte e novas descobertas científicas, mostrando que a ciência ultrapassa limites da imaginação.
+</div>
+</section>
+
+<section id="tecnologia">
+<h2>Tecnologia</h2>
+<div class="explicacao">
+A tecnologia aplica ciência para criar soluções práticas que melhoram a vida humana. Engenharia, eletrônica, computação, robótica e inteligência artificial transformam comunicação, transporte, saúde e indústria. Circuitos, sensores e softwares permitem automatizar tarefas, processar informações e controlar máquinas. Tecnologias médicas, como ressonância magnética, tomografia e vacinas avançadas, dependem de ciência aplicada. Programação de computadores cria aplicativos, sistemas de controle, jogos e sites. Compreender tecnologia possibilita uso consciente de recursos, inovação, criação de ferramentas práticas e melhoria da qualidade de vida, conectando ciência e cotidiano de forma tangível.
+</div>
+</section>
+
+<section id="terra">
+<h2>Ciências da Terra</h2>
+<div class="explicacao">
+Ciências da Terra analisam planeta, incluindo geologia, climatologia, oceanografia e paleontologia. Geologia explica formação de rochas, solos, minerais, vulcões, terremotos e tectônica de placas, permitindo prevenção de desastres e exploração de recursos. Climatologia e meteorologia estudam padrões de temperatura, chuva, ventos e mudanças climáticas, importantes para agricultura, planejamento urbano e proteção ambiental. Oceanografia investiga correntes, ecossistemas e impactos humanos nos mares. Paleontologia analisa fósseis, reconstruindo história da vida e mudanças planetárias. Entender Ciências da Terra é essencial para sustentabilidade, conservação, segurança e desenvolvimento de sociedades responsáveis.
 </div>
 </section>
 
 <footer>
-<p>© 2025 Enciclopédia de Ciência. Todos os direitos reservados.</p>
+<p>© 2025 Enciclopédia de Ciência Completa. Todos os direitos reservados.</p>
 </footer>
-
-<script>
-function openTab(tabId){
-    document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
-    document.getElementById(tabId).classList.add('active');
-    window.scrollTo({top:0, behavior:'smooth'});
-}
-</script>
 
 </body>
 </html>
